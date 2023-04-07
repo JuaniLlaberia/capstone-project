@@ -7,8 +7,10 @@ function App() {
   return (
     <>
       <Nav />
-      <Main />
-      <Footer />
+      <div style={{zIndex:'-2'}}>
+        <Main />
+        <Footer />
+      </div>
     </>
   );
 }

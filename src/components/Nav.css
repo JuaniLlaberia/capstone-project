@@ -1,0 +1,77 @@
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 7.5px;
+    font-family: 'Markazi Text', serif;
+    background-color: rgb(251, 218, 187);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    list-style-type: none;
+}
+
+.nav-item{
+    font-size: 1.25rem;
+    color: #333333;
+    transition: all 0.25s ease-in-out;
+}
+
+.nav-item:hover {
+    color: #747474;
+}
+
+.login{
+    background-color: rgb(255, 226, 36);
+    border-radius: 10px;
+    padding: 2.5px 5px;
+}
+
+.login:hover {
+    background-color: rgb(241, 213, 29);
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+
+    nav {
+        justify-content: space-between;
+        z-index: 2;
+        padding-left: 10px;
+        padding-right: 15px;
+    }
+
+    .navbar {
+        position: absolute;
+        top: -1100%;
+        left: 50%;
+        width: 100vw;
+        margin-left: -50vw;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.25s ease;
+    }
+
+    .navbar.active {
+        top: 50px;
+        background-color: rgb(251, 218, 187);
+        padding-bottom: 20px;
+        z-index: 1;
+    }
+
+    .menu-icon {
+        display:block;
+        cursor: pointer;
+    }
+}
