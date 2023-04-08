@@ -1,9 +1,14 @@
 import React from 'react'
+import Screen from './Screen'
+import BookingForm from './BookingForm'
+import './Form.css'
 
 export default function BookTable() {
   return (
-    <div style={{paddingTop:'100px'}}>
-      <h1>BOOK TABLE</h1>
+    <div className='background-img' style={{paddingTop:'55px'}}>
+      <Screen height='100vh'>
+        <BookingForm />
+      </Screen>
     </div>
   )
 }

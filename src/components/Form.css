@@ -1,0 +1,98 @@
+.background-img {
+    background-image: url('../img/restaurant.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+
+.form-container {
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    min-width: 400px;
+    height: 400px;
+    background-color: #495e57c7;
+    padding: 25px;
+    border-radius: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: 150px;
+}
+
+label {
+    font-family: 'Markazi Text', serif;
+    font-size: 1.5rem;
+    color: #EDEFEE;
+    padding: 2.5px;
+}
+
+h2 {
+    font-family: 'Markazi Text', serif;
+}
+
+.input-form {
+    font-family: 'Karla', sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.input-form:focus   {
+    outline: none;
+}
+
+.booking-btn {
+    font-family: 'Markazi Text', serif;
+    font-size: 1.5rem;
+    padding: 15px 5px;
+    margin-top: 25px;
+    background-color: #ffe224;
+    border: none;
+    border-radius: 16px;
+}
+
+.booking-btn:hover {
+    background-color: #e3c21a;
+    color: black;
+    transform: translateY(2%);
+    cursor: pointer;
+}
+
+.booking-btn:disabled {
+    cursor: not-allowed;
+    background-color: #8f8f8f;
+
+}
+
+.booking-btn:disabled:hover {
+    background-color: #8f8f8f;
+    color: #5d5d5d;
+    transform: translateY(2%);
+}
+
+.test {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width:490px) {
+    form {
+        scale: 0.85;
+    }
+}
+
+@media screen and (max-width:360px) {
+    form {
+        scale: 0.7;
+    }
+}
