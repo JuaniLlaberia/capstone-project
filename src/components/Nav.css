@@ -5,6 +5,10 @@ nav {
     padding: 7.5px;
     font-family: 'Markazi Text', serif;
     background-color: rgb(251, 218, 187);
+    height: 55px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 .navbar {
@@ -19,6 +23,7 @@ nav {
     font-size: 1.25rem;
     color: #333333;
     transition: all 0.25s ease-in-out;
+    cursor: pointer;
 }
 
 .nav-item:hover {
@@ -28,7 +33,7 @@ nav {
 .login{
     background-color: rgb(255, 226, 36);
     border-radius: 10px;
-    padding: 2.5px 5px;
+    padding: 5px 7.5px;
 }
 
 .login:hover {
