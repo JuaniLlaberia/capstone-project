@@ -39,17 +39,9 @@ export default function Main() {
         <div className='info-header'>
           <h2>Little Lemon</h2>
           <h6>Chicago, Illinois</h6>
-          <p> We are a family owned
-              Mediterranean restaurant,
-              focused on traditional
-              recipes served with a modern
-              twist. We are a family owned
-              Mediterranean restaurant,
-              focused on traditional
-              recipes served with a modern
-              twist.
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and...
           </p>
-          <Link to='/reservations' className='btn-book-head'>Book Now</Link>
+          <Link to='/reservations' className='btn-book-head' aria-label="On Click">Book Now</Link>
         </div>
         <div className='img-header'>
           <img src={require('../img/restauranfood.jpg')} className='imgage-hed' alt='dish'/>
@@ -62,21 +54,7 @@ export default function Main() {
         </div>
         <div className='history'>
           <h3>About Us</h3>
-          <p>We are a family owned
-              Mediterranean restaurant,
-              focused on traditional
-              recipes served with a modern
-              twist. We are a family owned
-              Mediterranean restaurant,
-              focused on traditional
-              recipes served with a modern
-              twist.
-              We are a family owned
-              Mediterranean restaurant,
-              focused on traditional
-              recipes served with a modern
-              twist. We are a family owned
-              Me</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
         </div>
       </Screen>
       <Screen color='#495E57' id='menu-section' height={window.innerWidth < 900 ? '155vh' : '60vh'}>

@@ -23,7 +23,7 @@ export default function Nav() {
 
     const displaySections = [['aboutus','About Us'], ['menu','Menu'], ['testimonial', 'Reviews']].map((el, i) => {
         return(
-            <li key={i} className='nav-item' onClick={() => handleScroll(el[0])}>{el[1]}</li>
+            <li key={i} className='nav-item' onClick={() => handleScroll(el[0])} aria-label="On Click">{el[1]}</li>
         )
     })
 
@@ -54,15 +54,15 @@ export default function Nav() {
     <header>
         <nav ref={test}>
         <img className='logo' src={logo} alt='logo'/>
-        <div onClick={handleClick} className='menu-icon'>{clicked ? <FontAwesomeIcon icon={faX} /> : <FontAwesomeIcon icon={faBars} />}</div>
+        <div onClick={handleClick} className='menu-icon' aria-label="On Click">{clicked ? <FontAwesomeIcon icon={faX} /> : <FontAwesomeIcon icon={faBars} />}</div>
         <ul className={clicked ? 'navbar active' : 'navbar'}>
-            <Link to='/' className='nav-item' onClick={handleClickClose}>Home</Link>
+            <Link to='/' className='nav-item' onClick={handleClickClose} aria-label="On Click">Home</Link>
             {/* <li className='nav-item' onClick={() => handleClickClose('aboutus')}>About us</li>
             <li onClick={handleClickClose}><a href='menu-section' className='nav-item'>Menu</a></li>
             <li onClick={handleClickClose}><a href='testimonial-section' className='nav-item'>Reviews</a></li> */}
             {displaySections}
-            <Link onClick={handleClickClose} to='/reservations' className='nav-item'>Reservations</Link>
-            <Link onClick={handleClickClose} to='/login' className='nav-item login'>Login</Link>
+            <Link onClick={handleClickClose} to='/reservations' className='nav-item' aria-label="On Click">Reservations</Link>
+            <Link onClick={handleClickClose} to='/login' className='nav-item login' aria-label="On Click">Login</Link>
         </ul>
         </nav>
     </header>

@@ -56,7 +56,7 @@ export default function BookingForm( {times} ) {
                 <option value='other'>Other</option>
             </select>
         </div>
-        <button disabled={!validateForm()} type='submit' className='booking-btn'>Make Reservation</button>
+        <button disabled={!validateForm()} type='submit' className='booking-btn' aria-label="On Click">Make Reservation</button>
       </form>
     </div>
   )

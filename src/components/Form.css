@@ -44,6 +44,10 @@ h2 {
     border: none;
 }
 
+.input-form:invalid {
+    border: 2px solid red;
+}
+
 .input-form.guests {
     width: 120px;
 }
