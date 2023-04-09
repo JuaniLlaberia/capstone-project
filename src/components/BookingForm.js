@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Form.css';
 
-export default function BookingForm() {
+export default function BookingForm( {times} ) {
     const [email, setEmail] = useState('');
     const [date, setDate] = useState('');
     const [time, setTime] = useState('default');
@@ -26,6 +26,8 @@ export default function BookingForm() {
       return (email && date && time !== 'default' && guests && occasion !== 'occasion')
     }
 
+    const displayHours = times?.map(t => <option key={t} value={t}>{t}</option>)
+
   return (
     <div className='form-container'>
       <form onSubmit={handleSubmit}>
@@ -40,18 +42,13 @@ export default function BookingForm() {
             <label htmlFor='table-time'>Time</label>
             <select value={time} id='table-time' className='input-form' onChange={e => setTime(e.target.value)}>
                 <option value='default'>Select hour</option>
-                <option value='18' >18:00</option>
-                <option value='19' >19:00</option>
-                <option value='20' >20:00</option>
-                <option value='21' >21:00</option>
-                <option value='22' >22:00</option>
-                <option value='23' >23:00</option>
+                {displayHours}
             </select>
         </div>
         <div className='test'>
             <label htmlFor='guests'>Guests</label>
-            <input value={guests} type='number' min={1} max={15} placeholder='Guest num' id='guests' className='input-form' onChange={e => setGuests(e.target.value)}/>
-            <label htmlFor='occasion'>Occassion</label>
+            <input value={guests} type='number' min={1} max={15} placeholder='Guests' id='guests' className='input-form guests' onChange={e => setGuests(e.target.value)}/>
+            <label htmlFor='occasion'>Occasion</label>
             <select value={occasion} id='occasion' className='input-form' onChange={e => setOccasion(e.target.value)}>
                 <option value='occasion'>Occasion</option>
                 <option value='birthday'>Birthday</option>
